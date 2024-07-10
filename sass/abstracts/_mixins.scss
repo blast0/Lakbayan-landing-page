@@ -1,0 +1,42 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin min-size($bp){
+    @if $bp == sm {
+        @media only screen and (min-width: 36em){ @content }; //576px
+    }
+    @if $bp == md {
+        @media only screen and (min-width: 48em){ @content }; //768px
+    }
+    @if $bp == lg {
+        @media only screen and (min-width: 62em){ @content }; //992px
+    }
+    @if $bp == xl {
+        @media only screen and (min-width: 75em){ @content }; //1200px
+    }
+    @if $bp == xxl {
+        @media only screen and (min-width: 87.5em){ @content }; //1800px
+    }
+}
+@mixin max-size($bp){
+    @if $bp == xs {
+        @media only screen and (max-width: 36em){ @content }; //575.98px
+    }
+    @if $bp == sm {
+        @media only screen and (max-width: 48em){ @content }; //767.98px
+    }
+    @if $bp == md {
+        @media only screen and (max-width: 62em){ @content }; //991.98px
+    }
+    @if $bp == lg {
+        @media only screen and (max-width: 75em){ @content }; //1199.98px
+    }
+    @if $bp == xl {
+        @media only screen and (max-width: 87.5px){ @content }; //1399.98px
+    }
+}

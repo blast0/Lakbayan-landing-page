@@ -1,0 +1,66 @@
+.about{
+    padding: 5rem 0 0 0;
+    @include min-size(md){
+        padding: 15rem 0;
+    }
+}
+
+.composition{
+    position: relative;
+    &-image {
+        position: relative;
+        width: 50%;
+        border-radius: 4px;
+        z-index: 10;
+        box-shadow: 0 1.5rem 3rem rgba($color-grey-dark, .2);
+        float: left;
+        @include min-size(md){
+            position: absolute;
+            width: 55%;
+            box-shadow: none;
+            transition: all .2s;
+            outline-offset: 2rem;
+        }
+        &-1{
+            left: 0;
+            top: 5rem;
+            @include min-size(md){
+                top: -2rem;
+            }
+        }
+        &-2{
+            right: 0;
+            top: 10rem;
+            @include min-size(md){
+                top: 2rem;
+            }
+        }
+        &-3{
+            left: 0;
+            top: 10rem;
+            @include min-size(md){
+                top: 20rem;
+            }
+        }
+        &-4{
+            right: 0;
+            top: 15rem;
+            @include min-size(md){
+                top: 25rem;
+            }
+        }
+        &-5{
+            left: 25%;
+            top: -20rem;
+            @include min-size(md){
+                top: 10rem;
+            }
+        }
+        &:hover{
+            transform: scale(1.5);
+            box-shadow: 0 2.5rem 4rem rgba($color-grey, .5);
+            z-index: 20;
+        }
+    }
+    
+}

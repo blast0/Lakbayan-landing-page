@@ -1,0 +1,62 @@
+.header{
+    height: 115vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    &-video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+        &-content{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &-logo-box{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    &-logo{
+        height: 70px;
+    }
+    &-text-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &-primary{
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+    &-title{
+        display: block;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 20px;
+        @include min-size(md){
+            font-size: 9rem;
+            letter-spacing: 35px;
+        }
+    }
+    &-title-sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        @include min-size(md){
+            font-size: 3rem;
+            letter-spacing: 5px;
+        }
+    }
+
+}
